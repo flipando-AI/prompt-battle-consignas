@@ -78,11 +78,11 @@ function rightOpacity(){
 }
 
 function mouseIsInRightBtn(){
-  return (dist(mouseX, mouseY, width*0.9, height/2) < 50);
+  return (dist(mouseX, mouseY, width*(1-btnsPct), height/2) < 50);
 }
 
 function mouseIsInLeftBtn(){
-  return (dist(mouseX, mouseY, width*0.1, height/2) < 50);
+  return (dist(mouseX, mouseY, width*btnsPct, height/2) < 50);
 }
 
 function mousePressed(){
