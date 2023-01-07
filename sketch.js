@@ -26,7 +26,7 @@ function draw() {
   rectMode(CENTER);
   textAlign(CENTER);
   let textActual = listaTextos[idxActual%listaTextos.length];
-  let textoY = height/2 - map(textActual.length / width*0.75, 0, 1, 0, 2000);
+  let textoY = height/2;
   text(textActual, width/2, textoY, width*0.75);
   
   imageMode(CENTER);
@@ -70,7 +70,7 @@ function leftOpacity(){
   if(mouseIsInLeftBtn()){
     return 255;
   } else{
-    return 127;
+    return 80;
   }
 }
 
@@ -78,7 +78,7 @@ function rightOpacity(){
   if(mouseIsInRightBtn()){
     return 255;
   } else{
-    return 127;
+    return 80;
   }
 }
 
