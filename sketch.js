@@ -4,6 +4,9 @@ let tiempoInicial = 90;
 let counter = tiempoInicial;
 let nuestroFont;
 
+let rightbtnX;
+let leftbtnX;
+
 function preload(){
   imgRightBtn = loadImage("right.png");
   nuestroFont = loadFont("Manrope-VariableFont_wght.ttf");
@@ -43,14 +46,16 @@ function draw() {
   
   
   let btnsPct = map(windowWidth, 0, 2000, 0.15, 0.02);
+  rightbtnX = width*(1-btnsPct)
+  leftbtnX = width*(btnsPct)
 
 
   tint(255, 255, 255, rightOpacity());
-  image(imgRightBtn, width*(1-btnsPct), height/2, 100, 100);
+  image(imgRightBtn, rightbtnX, height/2, 100, 100);
   
   push();
   tint(255, 255, 255, leftOpacity());
-  translate(width*btnsPct, height/2);
+  translate(leftbtnX, height/2);
   scale(-1, 1);
   image(imgRightBtn, 0, 0, 100, 100);
   pop();
@@ -78,11 +83,11 @@ function rightOpacity(){
 }
 
 function mouseIsInRightBtn(){
-  return (dist(mouseX, mouseY, width*(1-btnsPct), height/2) < 50);
+  return (dist(mouseX, mouseY, rightbtnX, height/2) < 50);
 }
 
 function mouseIsInLeftBtn(){
-  return (dist(mouseX, mouseY, width*btnsPct, height/2) < 50);
+  return (dist(mouseX, mouseY, leftbtnX, height/2) < 50);
 }
 
 function mousePressed(){
