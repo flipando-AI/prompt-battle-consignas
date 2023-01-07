@@ -38,7 +38,7 @@ function draw() {
   
   if(counter <= 0){
     background(0, 0, 0);
-    text("TIEMPO", width/2, height/2 + 20);
+    text("TIME OUT!", width/2, height/2 + 20);
   }
   
   
