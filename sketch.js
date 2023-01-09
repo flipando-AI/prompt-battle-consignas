@@ -3,7 +3,7 @@ let imgRightBtn;
 let playBtn;
 let resetBtn;
 let pauseBtn;
-let tiempoInicial = 3;
+let tiempoInicial = 59;
 let counter = tiempoInicial;
 let nuestroFont;
 
