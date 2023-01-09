@@ -1,6 +1,6 @@
 let idxActual = 0;
 let imgRightBtn;
-let tiempoInicial = 90;
+let tiempoInicial = 59;
 let counter = tiempoInicial;
 let nuestroFont;
 
