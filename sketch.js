@@ -162,7 +162,7 @@ function mousePressed(){
       counter = tiempoInicial;
     }
     
-  } else if(mouseIsInResetBtn){
+  } else if(mouseIsInResetBtn()){
     console.log("aaaaaa");
     playing = false;
     counter = tiempoInicial;
